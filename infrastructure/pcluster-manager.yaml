@@ -320,9 +320,7 @@ Resources:
               - Effect: Allow
                 Action:
                   - imagebuilder:DeleteImage
-                Resource: !Sub
-                  - arn:${AWS::Partition}:imagebuilder:${AWS::Region}:${AWS::AccountId}:image/*${StackIdSuffix}*
-                  - { StackIdSuffix: !Select [2, !Split ['/', !Ref 'AWS::StackId']] }
+                Resource: !Ref EcrImagePipeline
 
   EcrImagesRemover:
     Type: Custom::EcrImagesRemover
