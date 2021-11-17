@@ -26,7 +26,13 @@ For more details see the [Install Instructions](install/README.md).
 
 ## Updating
 
-To update the underlying lambda to the latest, run the `./scripts/update.sh` script.
+To update the underlying lambda to the latest, run:
+
+```bash
+git clone https://github.com/aws-samples/pcluster-manager.git
+cd pcluster-manager/
+./scripts/update.sh
+```
 
 ## Local Development
 
